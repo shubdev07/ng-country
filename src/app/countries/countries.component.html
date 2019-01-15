@@ -1,0 +1,55 @@
+<div id="">
+  <div class="container pb-3">
+    <h3 class="text-center grey-text font-weight-bold m-4 text-capitalize head-title" [innerHtml]="region"></h3>
+    <div class="row">
+      <div class="col-6">
+        <div class="md-form form-sm">
+          <input type="text" id="name" [(ngModel)]="userFilter.name" class="form-control form-control-sm">
+          <label for="name">Filter by country name</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="md-form form-sm">
+          <input type="text" id="capital" [(ngModel)]="userFilter.capital" class="form-control form-control-sm">
+          <label for="capital">Filter by capital</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let country of allCountries | filterBy: userFilter" class="col-md-3 mb-4">
+        <!-- Card -->
+        <div class="card m-auto">
+
+          <!-- Card image -->
+          <div class="view overlay">
+            <img class="card-img-top" src={{country.flag}} alt={{country.name}}>
+            <div class="mask rgba-white-slight"></div>
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body px-2 py-1">
+
+            <!-- Title -->
+            <h4 class="text-center font-weight-bold text-muted font-16" [innerHtml]="country.name"></h4>
+            <hr class="mb-1 mt-2">
+            <!-- Text -->
+            <div class="row px-3 text-center text-capitalize">
+              <!-- <div class="col-md-4 font-14 grey-text pr-0">Capital</div> -->
+              <div class="col-md-12 font-14 grey-text pl-0" [innerHtml]="country.capital"></div>
+              <!-- <div class="col-md-5 font-14 grey-text pr-0">Native Name</div> -->
+              <div class="col-md-12 font-14 text-primary pl-0" [innerHtml]="country.nativeName"></div>
+              <!-- <div class="col-md-4 font-14 grey-text pr-0">Sub Region</div> -->
+              <div class="col-md-12 font-14 grey-text pl-0" [innerHtml]="country.subregion"></div>
+            </div>
+
+            <!-- Button -->
+            <a href="#" class="btn btn-warning btn-sm px-3 py-1" [routerLink]="['/country',country.capital]">Know More</a>
+
+          </div>
+
+        </div>
+        <!-- Card -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #efefef;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-family: 'Dosis', sans-serif;
+}
+
+.region-card {
+    width: 100%;
+    height: 220px;
+    cursor: pointer;
+}
+
+.region-asia {
+    background: url('src/assets/img/asia.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: opacity(0.6);
+}
+
+.region-africa {
+    background: url('src/assets/img/africa.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.region-america {
+    background: url('src/assets/img/america.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.region-europe {
+    background: url('src/assets/img/europe.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.region-oceania {
+    background: url('src/assets/img/oceania.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.font-400 {
+    font-weight: 400 !important;
+}
+
+.font-16 {
+    font-size: 16px !important;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+div:focus {
+    outline: 0;
+}
+
+.head-title {
+    color: #f80 !important;
+}
+
+.md-form input[type=date]:focus:not([readonly]), .md-form input[type=datetime-local]:focus:not([readonly]), .md-form input[type=email]:focus:not([readonly]), .md-form input[type=number]:focus:not([readonly]), .md-form input[type=password]:focus:not([readonly]), .md-form input[type=search-md]:focus:not([readonly]), .md-form input[type=search]:focus:not([readonly]), .md-form input[type=tel]:focus:not([readonly]), .md-form input[type=text]:focus:not([readonly]), .md-form input[type=time]:focus:not([readonly]), .md-form input[type=url]:focus:not([readonly]), .md-form textarea.md-textarea:focus:not([readonly]) {
+    -webkit-box-shadow: 0 1px 0 0 #f80;
+    box-shadow: 0 1px 0 0 #f80;
+    border-bottom: 1px solid #f80;
+}
+
+.md-form input[type="date"]:focus:not([readonly]) + label, .md-form input[type="datetime-local"]:focus:not([readonly]) + label, .md-form input[type="email"]:focus:not([readonly]) + label, .md-form input[type="number"]:focus:not([readonly]) + label, .md-form input[type="password"]:focus:not([readonly]) + label, .md-form input[type="search-md"]:focus:not([readonly]) + label, .md-form input[type="search"]:focus:not([readonly]) + label, .md-form input[type="tel"]:focus:not([readonly]) + label, .md-form input[type="text"]:focus:not([readonly]) + label, .md-form input[type="time"]:focus:not([readonly]) + label, .md-form input[type="url"]:focus:not([readonly]) + label, .md-form textarea.md-textarea:focus:not([readonly]) + label {
+    color: #f80;
+}

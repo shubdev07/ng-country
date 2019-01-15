@@ -1,0 +1,28 @@
+/* all country */
+#allCountriesView {
+    background-image: url('src/assets/img/kyle-glenn-598701-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    width: 230px;
+}
+
+.card-body {
+    height: 126px;
+}
+
+.view-cascade {
+    height: 134px;
+}
+
+.view-cascade img {
+    background-size: cover;
+}
+
+img.card-img-top {
+    max-height: 127px;
+}
+
+

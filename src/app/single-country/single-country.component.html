@@ -1,0 +1,27 @@
+<img id="singleCountryImage" [src]="countryDetails.flag" alt="">
+
+<div class="container p-5" style="background-color: #efefef;position: absolute;left: 7%;top: 10%;">
+  <p class="text-center text-muted text-capitalize font-16 font-weight-bold" [innerHtml]="countryDetails.name"></p>
+  <div class="row py-2" *ngFor="let item of countryDetails | keyvalue">
+    <div *ngIf="item.key !== 'flag'" class="col-md-6 text-capitalize" [innerHtml]="item.key"></div>
+    <div *ngIf="item.key !== 'flag'" class="col-md-6 text-capitalize" [innerHtml]="item.value"></div>
+    <div *ngIf="item.key !== 'flag'" class="col-md-12">
+      <hr class="py-1">
+    </div>
+
+  </div>
+  <div class="row py-2" *ngFor="let item of extraDetails | keyvalue">
+    <div class="col-md-6 text-capitalize" [innerHtml]="item.key"></div>
+    <div class="col-md-6 text-capitalize">
+      <div class="row" *ngFor="let item of item.value | keyvalue">
+        <div class="col-md-3 text-capitalize" [innerHtml]="item.key"></div>
+        <div class="col-md-9 text-capitalize" [innerHtml]="item.value"></div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <hr class="py-1">
+    </div>
+
+  </div>
+
+</div>
